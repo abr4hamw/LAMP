@@ -1,9 +1,9 @@
 <?php
 //Datos de conexin (deben coincidir con docker-compose)
 $host   = "db";
-$dbname = "mi_base";
-$user   = "usuario";
-$password = "password123";
+$dbname = getenv('MYSQL_DATABASE');
+$user   = getenv('MYSQL_USER');
+$password = getenv('MYSQL_PASSWORD');
 
 //Intentar conexion
 $conn = new mysqli($host, $user, $password, $dbname);
